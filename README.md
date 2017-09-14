@@ -14,4 +14,3 @@ Assume readable files are all txt files.
 
 ## Developer
 Tianyi Zhao
-Email: zhaorq@gmail.com
