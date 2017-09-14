@@ -28,9 +28,9 @@ var formatOneData = (string) => {
     let result = {}; 
     result.length = split.length; 
     result.Name = split[0]; 
-   	result.Year = split[1]; 
+    result.Year = split[1]; 
     if(split[2]){
-    	result.returnData = split[2].split(",").map((str)=> Number(str)); 
+        result.returnData = split[2].split(",").map((str)=> Number(str)); 
     }
     return result; 
 };
@@ -43,26 +43,26 @@ var checkAndFormatSolution = (data) => {
 
     //check if each file contains three lines, and each line item reflects the expected content. data[0] is the path of the file; data[1] is the content. 
     if(data[1] === "") {
-       	console.log("Data is empty, check ",data[0]); 
-       	Pass = false;  
+        console.log("Data is empty, check ",data[0]); 
+        Pass = false;  
     }
     else if(formatted.length!==3) {
-       	console.log("file should have three lines, check ", data[0]); 
-       	Pass = false; 
+        console.log("file should have three lines, check ", data[0]); 
+        Pass = false; 
     }
     else {
-	   	var Name = formatted.Name; 
-	   	var Year = formatted.Year; 
+        var Name = formatted.Name; 
+        var Year = formatted.Year; 
         var returnData = formatted.returnData;            
-	   	if(isNaN(Number(Year))) {
-	   		console.log("Year data is wrong, check ", data[0]); 
-	   		Pass = false; 
-	   	}
-	   	if(returnData.length !==12) {
-	   		console.log("return data is not equal to 12, check ", data[0]); 
-	   		Pass = false; 
-	   	}
-	   	returnData.forEach(num => isNaN(Number(num))? (console.log("return data not all numbers, check ", data[0]), Pass = false): null);
+        if(isNaN(Number(Year))) {
+            console.log("Year data is wrong, check ", data[0]); 
+            Pass = false; 
+        }
+        if(returnData.length !==12) {
+            console.log("return data is not equal to 12, check ", data[0]); 
+            Pass = false; 
+        }
+        returnData.forEach(num => isNaN(Number(num))? (console.log("return data not all numbers, check ", data[0]), Pass = false): null);
     }
 
     //calculate and format data
@@ -70,9 +70,9 @@ var checkAndFormatSolution = (data) => {
         result.Name = Name.trim(); 
         result.Year = Number(Year); 
         result["Cumulative Return"] = ((returnData.reduce((a,b) => {return a*(1+b/100);}, 1)-1)*100).toFixed(2) + "%"; 
-     	result["% Positive Months"] = ((returnData.filter(num => num>=0).length/12 * 100)).toFixed(2) + "%"; 
-     	result["Best Month"] = Math.max.apply(null,returnData).toFixed(2) + "%"; 
-     	return result; 
+        result["% Positive Months"] = ((returnData.filter(num => num>=0).length/12 * 100)).toFixed(2) + "%"; 
+        result["Best Month"] = Math.max.apply(null,returnData).toFixed(2) + "%"; 
+        return result; 
     }
 };
 
