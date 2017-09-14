@@ -1,6 +1,6 @@
 # dataFormatter
 
-## Author
+## Developer
 Tianyi Zhao
 
 ## Requirements
@@ -12,3 +12,5 @@ From within the root directory:
 
 node app.js
 
+### Assumptions
+Assume readable files are all txt files.
