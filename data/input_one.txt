@@ -1,0 +1,3 @@
+Bloomberg Barclays US Aggregate Bond TR USD   
+2016
+1.38, 0.71, 0.92, 0.38, 0.03, 1.80, 0.63, -0.11, -0.06, -0.76, -2.37, 0.14
