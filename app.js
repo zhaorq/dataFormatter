@@ -1,5 +1,5 @@
 
-var fs = require("fs"); path = require("path");
+var fs = require("fs"), path = require("path");
 var p = "./data"; 
 var fileNames = []; 
 var allData = []; 
@@ -88,7 +88,8 @@ var allDataSolution = (allData) =>{
     
     holder.forEach((obj) => {
         for(var k in obj){
-            if(k==="Name"){result.push(obj[k]);}else{
+            if(k==="Name"){result.push(obj[k]);}
+            else{
                 result.push(k.concat(": ", obj[k]));
             }             
         }
