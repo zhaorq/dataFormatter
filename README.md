@@ -2,7 +2,7 @@
 
 ### Requirements
 
-- Node 6.10.x
+Node 6.10.x
 
 ### Start App
 From within the root directory:
