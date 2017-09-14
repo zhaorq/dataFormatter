@@ -1,8 +1,5 @@
 # dataFormatter
 
-## Developer
-Tianyi Zhao
-
 ## Requirements
 
 - Node 6.10.x
@@ -14,3 +11,7 @@ node app.js
 
 ### Assumptions
 Assume readable files are all txt files.
+
+## Developer
+Tianyi Zhao
+Email: zhaorq@gmail.com
